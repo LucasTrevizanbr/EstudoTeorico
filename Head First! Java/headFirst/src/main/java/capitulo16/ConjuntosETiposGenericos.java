@@ -24,6 +24,12 @@ public class ConjuntosETiposGenericos {
        finalidade, quando quisermos classificar a mesma coisa de formas diferentes. Podemos usar o Comparator e
        criar uma classe que implemente e então sobrescrever o método de compare(), para chamar no
        Collections.sort() passamos dois argumentos, a lista a ser ordenada e a classe com o comparator.
+              A Jukebox agora tem uma HashSet<Musica> para pegarmos as músicas diferentes, por exemplo, na
+       lista de reprodução a música "x" foi tocada 3 vezes consecutivas, mas não queremos retornar ela 3 vezes
+       na list. Para dizer que dois objetos diferentes tem o mesmo valor é necessário sobrescrever os métodos
+      hashCode() e equals() herdados de Object. Então sobrescrevemos o hashCode para que os dois objetos
+      equivalentes retornem o mesmo código de hashing. E sobrepomos o equals() para que se chama-lo em
+      um dos objetos, passando o outro como argumento sempre retornar verdadeiro.
 
 
      */
